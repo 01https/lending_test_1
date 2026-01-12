@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="EU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=375, user-scalable=no">
+<meta name="theme-color" content="#924900" />
+<title>Замовлення створено | Електрообігрівач 3в1</title>
+<meta property="og:site_name" content="Замовлення створено | Електрообігрівач 3в1">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="assets/css/checkout.css" />
+</head>
+<body>
+<div class="overlay hidden"></div>
+<section class="checkout-form">
+    <div>
+    <h1>Вітаємо! <br />Ваше замовлення в обробці!</h1>
+    <p>Наші оператори зв'яжуться з вами за кілька хвилин! Просимо тримати телефон поруч) Дякуємо що обрали нас!</p>
+
+    <form method="post" action="">
+    </div>
+    </button>
+    <button type="submit" name="save" class="hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M48 96l0 320c0 8.8 7.2 16 16 16l320 0c8.8 0 16-7.2 16-16l0-245.5c0-4.2-1.7-8.3-4.7-11.3l33.9-33.9c12 12 18.7 28.3 18.7 45.3L448 416c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96C0 60.7 28.7 32 64 32l245.5 0c17 0 33.3 6.7 45.3 18.7l74.5 74.5-33.9 33.9L320.8 84.7c-.3-.3-.5-.5-.8-.8L320 184c0 13.3-10.7 24-24 24l-192 0c-13.3 0-24-10.7-24-24L80 80 64 80c-8.8 0-16 7.2-16 16zm80-16l0 80 144 0 0-80L128 80zm32 240a64 64 0 1 1 128 0 64 64 0 1 1 -128 0z" fill="currentColor"/></svg>
+        <span>Зберегти зміни</span>
+    </button>
+    </form>
+</section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", (gE) => {
+    // Hide save-message
+    setTimeout(() => {
+        const m = document.querySelector('#save-message');
+        if(m){
+        m.classList.add('hidden');
+        }
+    }, 5000);
+
+    // Toggle overlay, inputs and button
+    const bE = document.querySelector('button[name="edit"]');
+    const bS = document.querySelector('button[name="save"]');
+    const o = document.querySelector('.overlay');
+    const iN = document.querySelector('input[name="name"]');
+    const iP = document.querySelector('input[name="phone"]');
+
+    if(bE && bS && o && iN && iP){
+        bE.addEventListener('click', (e) => {
+        e?.preventDefault();
+        bE.classList.add('hidden');
+        bS.classList.remove('hidden');
+        o.classList.remove('hidden');
+        iN.removeAttribute('disabled');
+        iP.removeAttribute('disabled');
+        });
+    }
+    });
+</script>
+
+</body>
+</html>
